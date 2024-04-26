@@ -39,7 +39,7 @@ is vanishingly small.
 ## Installation
 
 ```sh
-composer require dmitrykirillov/simplepack
+composer require dmitry-kirillov/simplepack
 ```
 
 ## Usage

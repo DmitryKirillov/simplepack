@@ -25,7 +25,7 @@ class Simplepack implements \ArrayAccess, \Countable, \IteratorAggregate, \JsonS
         // todo Add fromArray() method
     }
 
-    #[ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function getIterator()
     {
         if (is_array($this->unpackedData)) {
@@ -34,7 +34,7 @@ class Simplepack implements \ArrayAccess, \Countable, \IteratorAggregate, \JsonS
         return new SimplepackIterator($this->packedData, $this->usedBytes);
     }
 
-    #[ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         if (is_array($this->unpackedData)) {
@@ -43,7 +43,7 @@ class Simplepack implements \ArrayAccess, \Countable, \IteratorAggregate, \JsonS
         return $this->findEntryPosition($offset) !== null;
     }
 
-    #[ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         if (is_array($this->unpackedData)) {
@@ -57,7 +57,7 @@ class Simplepack implements \ArrayAccess, \Countable, \IteratorAggregate, \JsonS
         return null;
     }
 
-    #[ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         // Early return if the data is already unpacked
@@ -90,7 +90,7 @@ class Simplepack implements \ArrayAccess, \Countable, \IteratorAggregate, \JsonS
         }
     }
 
-    #[ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         // Early return if the data is already unpacked
@@ -104,7 +104,7 @@ class Simplepack implements \ArrayAccess, \Countable, \IteratorAggregate, \JsonS
         }
     }
 
-    #[ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function count()
     {
         if (is_array($this->unpackedData)) {
@@ -113,7 +113,7 @@ class Simplepack implements \ArrayAccess, \Countable, \IteratorAggregate, \JsonS
         return $this->count;
     }
 
-    #[ReturnTypeWillChange]
+    #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
         // todo Optimise performance

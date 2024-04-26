@@ -1,0 +1,19 @@
+{
+    "name": "dmitry-kirillov/simplepack",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "DmitryKirillov\\Simplepack\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dmitry Kirillov"
+        }
+    ],
+    "require": {
+        "php": ">=5.6",
+        "ext-json": "*"
+    }
+}
